@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+#{set title:'Sign in' /}
+
+<div id="home">
+
+    <h2>Bienvenido al chat de Insoftcan</h2>
+
+    <div id="signin">
+        #{form @enterDemo()}
+            #{if flash.error}
+                <p class="error">
+                    ${flash.error}
+                </p>
+            #{/if}
+            <p>
+                <label for="nick">Choose a nick name</label>
+                <input type="text" name="user" id="user">
+            </p>
+            <p>
+                <label></label>
+                <input type="submit" id="enter" value="Enter the chat room">
+            </p>
+        #{/form}
+    </div>
+
+</div>
